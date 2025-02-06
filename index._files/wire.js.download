@@ -1,0 +1,1 @@
+(function() {var imgUrl = "https://t.spbx.app/wire?u="+encodeURIComponent(document.location.href);var img = document.createElement("img");img.setAttribute("src", imgUrl);document.head.appendChild(img);})()
