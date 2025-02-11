@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Example</title>
+    <style>
+        /* Style the popup container */
+        .popup {
+            display: none; /* Initially hidden */
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Overlay */
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Style the popup content */
+        .popup-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Style for the close button */
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        /* Style the popup text in red */
+        .popup-content h2, .popup-content p {
+            color: rgb(0, 0, 0); /* Red color for the text */
+        }
+        /* Style the popup text in red */
+        .popup-content h3, .popup-content p {
+            color: rgb(0, 0, 0); /* Red color for the text */
+        }
+    </style>
+</head>
+<body>
+
+<!-- The Popup -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span id="closeBtn" class="close-btn">&times;</span>
+        <h2>This is to inform you that your 2-Factor Authentication Has Been Enabled.</h2>
+        <h3>If You See Any Error, Please Contact Our Representative For Help +1(856)945-2146.</h3>
+    </div>
+</div>
+
+<script>
+    // Show the popup
+    function showPopup() {
+        document.getElementById("popup").style.display = "flex";
+    }
+
+    // Hide the popup
+    function closePopup() {
+        document.getElementById("popup").style.display = "none";
+    }
+
+    // Event listener for the close button
+    document.getElementById("closeBtn").addEventListener("click", closePopup);
+
+    // Show the popup after 5 second (you can trigger this based on your own event)
+    setTimeout(showPopup, 1000);
+</script>
+
+</body>
+</html>
